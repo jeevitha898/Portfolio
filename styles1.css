@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    background-color: #000000;
+    color: white;
+    font-family: 'Times New Roman', serif;
+    text-align: center; /* To center the title */
+    overflow-x: hidden;
+}
+
+.education-section {
+    padding: 20px;
+}
+
+.title {
+    font-size: 48px;
+    font-family: Georgia, serif;
+    letter-spacing: 6px;
+    margin-bottom: 30px; /* Adds space between the title and the content below */
+    animation: slideInFromLeft 1s ease-in-out forwards;
+}
+
+.institute-name {
+    letter-spacing: 6px;
+    opacity: 0;
+    animation: fadeIn 2s forwards ease-in-out;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0 50px;
+    animation: fadeInContent 1.5s ease-in-out forwards;
+}
+
+.photo-container {
+    padding: 30px;
+    margin-left: 0;
+    text-align: center;
+}
+
+.education-photo {
+    width: 400px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 8px 18px rgba(233, 234, 231, 0.767);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.pvp-photo {
+    box-shadow: 0 8px 18px rgba(170, 217, 230, 0.982);
+}
+
+.education-photo:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 16px 24px rgba(233, 234, 231, 0.8); /* Enhanced shadow on hover */
+}
+
+.institute-name {
+    margin-top: 20px;
+    font-size: 36px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.text-box {
+    padding: 20px;
+    max-width: 500px;
+    text-align: left; /* Align text to the left */
+    animation: slideInFromRight 1.5s ease-in-out forwards;
+}
+
+.degree {
+    font-size: 30px;
+    margin-bottom: 20px;
+    position: relative;
+    top: -60px; /* Adjust this value as needed to move the degree part up */
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.major {
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-style: italic;
+    position: relative;
+    top: -58px;
+    animation: fadeInUp 1.2s ease-in-out forwards;
+}
+
+.description {
+    font-size: 15px;
+    line-height: 3;
+    font-family: cursive;
+    font-weight: 300;
+    position: relative;
+    top: -45px;
+    color: grey;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-in-out forwards;
+}
+
+/* Animations */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInContent {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

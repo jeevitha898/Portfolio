@@ -1,0 +1,310 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(145deg, #1a1a2e, #0f0f1a);
+    color: #e4e4f7;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    background: rgba(10, 10, 30, 0.9);
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Top Navbar (Visible on Large Screens) */
+.top-nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    transition: background 0.3s;
+}
+
+h2{
+    font-size: 1.5rem;
+    color: #00e0ff;
+    margin-bottom: 10px;
+    text-align: center;
+    text-shadow: 0 2px 8px rgba(0, 224, 255, 0.7);
+}
+
+.top-nav a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Side Navbar (Visible on Small Screens) */
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100%;
+    background: rgba(10, 10, 30, 0.95);
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: left 0.3s;
+}
+
+.side-nav.open {
+    left: 0;
+}
+
+.side-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.side-nav a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Menu Button */
+.menu-btn {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .top-nav {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+}
+/* Section Styles */
+.section {
+    padding: 3rem 1.5rem;
+    text-align: center;
+    background: rgba(30, 30, 50, 0.8);
+    border-radius: 15px;
+    margin: 1.5rem 1rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    position: relative;
+}
+
+.section::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    z-index: -1;
+    background: linear-gradient(145deg, rgba(0, 224, 255, 0.3), rgba(255, 89, 216, 0.3));
+    animation: pulse 4s infinite alternate;
+}
+
+.education-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+/* Education Container */
+.education-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Education Card */
+.education-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: linear-gradient(145deg, #21213b, #1a1a30);
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    max-width: 800px;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+.education-image {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-right: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.education-content {
+    padding: 1.5rem;
+    color: #e4e4f7;
+    text-align: left;
+    flex: 1;
+}
+
+.education-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #00e0ff;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 15px rgba(0, 224, 255, 0.8);
+}
+
+.education-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .education-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .education-card {
+        flex-direction: column;
+    }
+
+    .education-image {
+        width: 100%;
+        height: 200px;
+        border-right: none;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .education-content {
+        text-align: center;
+    }
+}
+
+/* Image Container */
+.image-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.2);
+    border-color: rgba(255, 89, 216, 0.6);
+}
+
+/* Butterfly Effect */
+.butterfly-effect {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+    filter: opacity(0.6);
+}
+
+.butterfly {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    animation: fly 12s linear infinite;
+    transform-origin: center;
+    background: radial-gradient(circle at center, #00e0ff, #ff59d8);
+    border-radius: 50%;
+    filter: blur(3px);
+}
+
+@keyframes fly {
+    0% {
+        transform: translateX(-100px) translateY(100vh) rotate(0);
+    }
+    100% {
+        transform: translateX(110vw) translateY(-100vh) rotate(360deg);
+    }
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+        margin: 0.3rem 0.8rem;
+    }
+
+    .education-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .education-content p {
+        font-size: 0.9rem;
+    }
+
+    .image-container img {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    .section {
+        padding: 2.5rem 1rem;
+    }
+
+    .education-container {
+        gap: 1rem;
+    }
+}

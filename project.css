@@ -1,0 +1,137 @@
+.project-item {
+    position: relative;
+    width: 300px; /* Increased width to give more space */
+    height: 350px; /* Adjusted height to keep the card proportionate */
+    text-align: center;
+    flex-shrink: 0;
+    z-index: 1;
+    margin: 1rem;
+}
+
+.project-circle {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    z-index: 2;
+    position: relative;
+}
+
+.project-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-item:hover .project-circle {
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+.project-name {
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.project-hover-box {
+    width: 350px; /* Increased width for the description box */
+    height: 250px; /* Adjusted height to make the description area larger */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 40px;
+    padding: 1rem;
+    color: #e4e4f7;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align text at the top */
+    overflow-y: auto; /* Ensure text scrolling if too long */
+}
+
+.project-item:hover .project-hover-box {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.project-hover-box p {
+    font-size: 0.8rem; /* Smaller font for the description */
+    margin-bottom: 1rem;
+    max-height: 150px; /* Increased space for text */
+    overflow-y: auto; /* Enable vertical scrolling */
+    white-space: normal; /* Wrap text */
+    word-wrap: break-word; /* Ensure long words break */
+}
+
+.project-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #e4e4f7;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+.code-btn {
+    background: linear-gradient(145deg, #31316a, #1e1e50);
+}
+
+.live-btn {
+    background: linear-gradient(145deg, #346a31, #1e5031);
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Modern scrollbar styling */
+.projects-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.projects-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+.projects-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Horizontal Layout for Project Items */
+.projects-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-start;
+    flex-wrap: nowrap; /* Ensure horizontal layout */
+    overflow-x: auto; /* Allow horizontal scrolling if content exceeds the width */
+    padding: 1rem;
+}
+
+@media (max-width: 768px) {
+    .projects-container {
+        flex-wrap: nowrap; /* Ensure horizontal scrolling */
+        overflow-x: auto; /* Allow scrolling if needed */
+        justify-content: flex-start; /* Align items to the left */
+        padding: 1rem;
+    }
+}

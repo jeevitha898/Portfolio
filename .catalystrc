@@ -1,0 +1,30 @@
+{
+  "defaults": {
+    "project": 1,
+    "env": 1
+  },
+  "actives": {
+    "project": 1,
+    "env": 1
+  },
+  "projects": [
+    {
+      "idx": 1,
+      "id": "10576000000030001",
+      "name": "Jeevitha",
+      "domain": {
+        "id": "50024680988",
+        "name": "jeevitha-60034149721.development"
+      },
+      "timezone": "Asia/Kolkata",
+      "env": [
+        {
+          "idx": 1,
+          "id": "60034149721",
+          "name": "Development",
+          "type": 3
+        }
+      ]
+    }
+  ]
+}
